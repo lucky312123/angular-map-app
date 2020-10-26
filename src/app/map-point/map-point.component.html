@@ -1,0 +1,25 @@
+<form class="form-inline">
+  <div class="form-group">
+    <label for="X">X:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="longitude"
+      name="longitude"
+      disabled="true"
+      [ngModel]="mapPoint.longitude"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="Y">Y:</label>
+    <input
+      type="text"
+      class="form-control"
+      id="latitude"
+      name="latitude"
+      disabled="true"
+      [ngModel]="mapPoint.latitude"
+    />
+  </div>
+</form>

@@ -1,0 +1,15 @@
+<div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+    <app-map-point [mapPoint]="mapPoint"></app-map-point>
+  </nav>
+</div>
+
+<div
+  id="map"
+  leaflet
+  [leafletOptions]="options"
+  (leafletMapReady)="initializeMap($event)"
+  (leafletClick)="onMapClick($event)"
+>
+  <app-sidebar [hidden]="isHidden"></app-sidebar>
+</div>
