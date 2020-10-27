@@ -21,7 +21,7 @@ export class MapComponent implements OnInit {
   lastLayer: any;
   mapPoint: MapPoint;
   options: MapOptions;
-  isHidden = false;
+  isHidden = true;
 
   constructor() {}
 
@@ -52,13 +52,12 @@ export class MapComponent implements OnInit {
     ]);
     this.lastLayer = marker(coordinates)
       .setIcon(mapIcon)
-      .on('click', this.hidden)
+      .on('click', this.hidden.bind(this))
       .addTo(this.map);
     this.map.setView(coordinates, this.map.getZoom());
   }
 
   hidden() {
-    alert('asdsad');
     this.isHidden = !this.isHidden;
   }
 

@@ -11,5 +11,7 @@
     (leafletMapReady)="initializeMap($event)"
     (leafletClick)="onMapClick($event)"
   ></div>
-  <app-sidebar [hidden]="isHidden"></app-sidebar>
+  <ng-container *ngIf="isHidden">
+    <app-sidebar></app-sidebar>
+  </ng-container>
 </div>
