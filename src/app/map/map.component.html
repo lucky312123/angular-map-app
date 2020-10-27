@@ -3,13 +3,13 @@
     <app-map-point [mapPoint]="mapPoint"></app-map-point>
   </nav>
 </div>
-
-<div
-  id="map"
-  leaflet
-  [leafletOptions]="options"
-  (leafletMapReady)="initializeMap($event)"
-  (leafletClick)="onMapClick($event)"
->
+<div class="d-flex flex-row">
+  <div
+    id="map"
+    leaflet
+    [leafletOptions]="options"
+    (leafletMapReady)="initializeMap($event)"
+    (leafletClick)="onMapClick($event)"
+  ></div>
   <app-sidebar [hidden]="isHidden"></app-sidebar>
 </div>

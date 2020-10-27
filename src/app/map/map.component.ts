@@ -52,13 +52,13 @@ export class MapComponent implements OnInit {
     ]);
     this.lastLayer = marker(coordinates)
       .setIcon(mapIcon)
-      // .on('click', this.hidden)
+      .on('click', this.hidden)
       .addTo(this.map);
     this.map.setView(coordinates, this.map.getZoom());
   }
 
   hidden() {
-    // alert('asdsad');
+    alert('asdsad');
     this.isHidden = !this.isHidden;
   }
 
@@ -86,7 +86,6 @@ export class MapComponent implements OnInit {
     this.clearMap();
     this.updateMapPoint(e.latlng.lat, e.latlng.lng);
     this.createMarker();
-    this.hidden();
   }
 
   private updateMapPoint(latitude: number, longitude: number, name?: string) {
